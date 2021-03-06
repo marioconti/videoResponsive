@@ -1,0 +1,27 @@
+/*
+Esto lo obuve del tutorial de dorian design
+(con este tutorial hice la práctica)
+Vídeos responsive:
+        La forma más común es hacer un padding-bottom de 56.25%, éste número es el resultado de la operación (9 / 16) es decir un formato 16:9, esto da como resultado 0.5625 si lo multiplicamos por 100 el resultado es 56.25
+*/
+
+.container {
+  width: 80%; /*esto va ser el ancho del contenedor que engloba el contenedor video y el iframe*/
+  /*con mg-l y mg-r auto centramos*/
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 320px; /*esto lo sabemos porque los moviles más pequeños tienen 320*/
+  max-width: 1400px; /*esto puede variar en el dispositivo/pantalla*/
+}
+
+.video {
+  height: 0; /*con esto hacemos que no tenga alto*/
+  padding-bottom: 56.25%; /*con esto conseguimos la proporción de 16:9*/
+  position: relative;
+}
+
+.video iframe {
+  position: absolute; /*cuando usamos poistion absolute el video pierde sus dimensiones, esto se soluciona con widht y height de 100%*/
+  width: 100%;
+  height: 100%;
+}
